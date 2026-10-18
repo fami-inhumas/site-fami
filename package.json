@@ -1,0 +1,35 @@
+{
+  "name": "site-fami",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Site institucional da FAMI — Fase 1 (pré-visualização)",
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/guarda-pendentes.mjs && next build && node scripts/pos-build.mjs",
+    "start": "node scripts/servidor-local.mjs",
+    "prova:bloqueio": "node scripts/guarda-pendentes.mjs --producao",
+    "placar": "node scripts/placar.mjs",
+    "teclado": "node scripts/teclado.mjs",
+    "verifica:terceiros": "node scripts/verifica-terceiros.mjs",
+    "verifica:mapa": "node scripts/verifica-mapa.mjs",
+    "verifica:tudo": "npm run verifica:terceiros && npm run verifica:mapa && npm run placar && npm run teclado",
+    "inventario": "node scripts/inventario.mjs"
+  },
+  "dependencies": {
+    "next": "16.4.2",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@types/node": "26.6.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "playwright": "1.64.1",
+    "sharp": "0.35.5",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
