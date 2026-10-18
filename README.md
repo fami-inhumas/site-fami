@@ -28,7 +28,7 @@ Referência completa: [`docs/DESENHO-TECNICO-SITE-FAMI.md`](docs/DESENHO-TECNICO
 | `npm run build` | Guarda de pendentes → build estático → pós-build (retira scripts, limpa metadados de imagens). Saída em `out/`. |
 | `npm start` | Serve `out/` em http://localhost:3010 com os cabeçalhos da Vercel. |
 | `npm run prova:bloqueio` | Mostra o build de **produção** bloqueado enquanto houver PENDENTE. |
-| `npm run verifica:tudo` | Terceiros + mapa + placar (axe, CSP, console) + teclado. Precisa do build. |
+| `npm run verifica:tudo` | Terceiros + endereços do mapa + mapa interativo sem JavaScript + placar (axe, CSP, console) + teclado. Precisa do build. |
 | `npm run inventario` | Relê o `fami.org.br` (só leitura) e regenera os CSVs do inventário. |
 
 O placar e o teste de teclado usam o **Microsoft Edge já instalado** (Playwright,
@@ -56,6 +56,7 @@ Para confirmar um dado: troque o `pendente(...)` pelo valor conferido, no arquiv
 
 ## Proteção de atendidos
 
+- **Mapa interativo sem JavaScript:** cada cidade é um painel `<details>/<summary>`; cada marcador do desenho é um link para o painel (o alvo fica dentro do `<details>`, e o navegador o abre). `npm run verifica:mapa-interativo` testa com o JavaScript desligado.
 - `content/unidades.ts`: cidades de acolhimento e socioeducação **não têm campo de
   endereço** (o TypeScript impede). Não há latitude/longitude no repositório.
 - `npm run verifica:mapa` varre tudo o que vai ao navegador: lista branca de endereços

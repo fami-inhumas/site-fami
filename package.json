@@ -12,8 +12,9 @@
     "teclado": "node scripts/teclado.mjs",
     "verifica:terceiros": "node scripts/verifica-terceiros.mjs",
     "verifica:mapa": "node scripts/verifica-mapa.mjs",
-    "verifica:tudo": "npm run verifica:terceiros && npm run verifica:mapa && npm run placar && npm run teclado",
-    "inventario": "node scripts/inventario.mjs"
+    "verifica:tudo": "npm run verifica:terceiros && npm run verifica:mapa && npm run verifica:mapa-interativo && npm run placar && npm run teclado",
+    "inventario": "node scripts/inventario.mjs",
+    "verifica:mapa-interativo": "node scripts/mapa-interativo.mjs"
   },
   "dependencies": {
     "next": "16.4.2",
