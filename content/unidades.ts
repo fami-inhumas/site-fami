@@ -50,9 +50,31 @@ export const cidades: Cidade[] = [
     endereco: "Rua da Saudade, Qd. 135, Lt. 19, Centro",
     programas: ["Caminhar", "Jovem Aprendiz", "FAMI Service", "Casa da Acolhida"],
     observacao:
-      "O endereço é o da sede administrativa. Os programas de acolhimento não têm endereço divulgado.",
+      "O endereço é o da sede administrativa. Os programas de acolhimento não têm endereço divulgado. A unidade de Inhumas atende também o Jovem Aprendiz de Goianira e Itauçu.",
     x: 225,
     y: 595,
+  },
+  {
+    id: "goianira",
+    tipo: "so-cidade",
+    cidade: "Goianira",
+    uf: "GO",
+    programas: ["Jovem Aprendiz"],
+    observacao: "Atendimento pela unidade de Inhumas.",
+    // Esquemático: a sudeste de Inhumas, afastado o bastante para os marcadores não se tocarem.
+    x: 255,
+    y: 625,
+  },
+  {
+    id: "itaucu",
+    tipo: "so-cidade",
+    cidade: "Itauçu",
+    uf: "GO",
+    programas: ["Jovem Aprendiz"],
+    observacao: "Atendimento pela unidade de Inhumas.",
+    // Esquemático: a noroeste de Inhumas.
+    x: 195,
+    y: 565,
   },
   {
     id: "rio-verde",

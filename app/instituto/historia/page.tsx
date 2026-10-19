@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { BlocoPendente } from "@/components/Blocos";
 import { CabecaPagina } from "@/components/CabecaPagina";
 import { textoHistoria } from "@/content/conteudo-editorial";
 import { instituicao } from "@/content/instituicao";
@@ -14,7 +13,9 @@ export default function Historia() {
       </CabecaPagina>
       <section className="secao">
         <div className="container texto">
-          <BlocoPendente dado={textoHistoria} />
+          {textoHistoria.map((paragrafo) => (
+            <p key={paragrafo}>{paragrafo}</p>
+          ))}
         </div>
       </section>
     </>

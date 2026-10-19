@@ -12,8 +12,9 @@ export default function JovemAprendiz() {
     <>
       <CabecaPagina titulo="Jovem Aprendiz">
         <p>
-          Aprendizagem profissional em Inhumas (GO) e no Tocantins: Palmas, Araguatins,
-          Augustinópolis, Dianópolis e Paraíso do Tocantins. No Tocantins, o programa é executado
+          Aprendizagem profissional em Goiás (Inhumas, Goianira e Itauçu, com atendimento pela
+          unidade de Inhumas) e no Tocantins: Palmas, Araguatins, Augustinópolis, Dianópolis e
+          Paraíso do Tocantins. No Tocantins, o programa é executado
           por contrato de gestão com a UNITINS.
         </p>
       </CabecaPagina>
