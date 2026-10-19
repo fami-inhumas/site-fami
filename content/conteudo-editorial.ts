@@ -18,10 +18,12 @@ export const historias = pendente(
   "Gente e Gestão"
 );
 
-export const textoHistoria = pendente(
-  "Texto da história da FAMI desde 1993",
-  "Superintendente"
-);
+// Texto conferido pelo Superintendente (Thiago, 19/10/2026).
+export const textoHistoria: readonly string[] = [
+  "A Fundação de Assistência ao Menor Inhumense nasceu em 15 de julho de 1993, com o apoio da comunidade católica de Inhumas, para oferecer a meninos e meninas do município oportunidades de esporte, cultura e convivência que nem todos tinham.",
+  "Ainda em 1993, foi declarada de utilidade pública pelo Município (Lei nº 2.225, de 26 de novembro de 1993) e, no ano seguinte, pelo Estado de Goiás (Lei nº 12.343, de 25 de abril de 1994).",
+  "Com o tempo, a atuação se ampliou. Hoje a FAMI reúne o Programa Caminhar, a aprendizagem profissional, o acolhimento institucional, o atendimento socioeducativo em parceria com o Governo de Goiás e o FAMI Service, com presença em Goiás e no Tocantins. O propósito continua o mesmo: formar cidadãos conscientes dos seus direitos e preparados para exercê-los.",
+];
 
 export const estatuto = pendente("Estatuto vigente em PDF para publicação", "Superintendente");
 

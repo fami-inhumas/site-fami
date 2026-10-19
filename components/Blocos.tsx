@@ -29,9 +29,15 @@ export function CartaoPrograma({ p }: { p: FichaPrograma }) {
     <li className="cartao">
       <h3>{p.nome}</h3>
       <p className="onde">{p.onde}</p>
-      <p>
-        <Valor dado={p.resumo} />
-      </p>
+      {ehPendente(p.resumo) ? (
+        <p>
+          <MarcadorPendente dado={p.resumo} />
+        </p>
+      ) : (
+        (typeof p.resumo === "string" ? [p.resumo] : p.resumo).map((paragrafo) => (
+          <p key={paragrafo}>{paragrafo}</p>
+        ))
+      )}
     </li>
   );
 }
