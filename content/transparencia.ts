@@ -30,6 +30,6 @@ export const parcerias = pendente(
 );
 
 export const documentosInstitucionais = pendente(
-  "Estatuto, relação de dirigentes e demonstrações aprovadas para publicação",
+  "Relação de dirigentes e demonstrações contábeis para publicação",
   "Superintendente"
 );
