@@ -2,6 +2,7 @@ import Link from "next/link";
 import { instituicao } from "@/content/instituicao";
 import { menuPrincipal, menuRodape } from "@/content/navegacao";
 import { Valor } from "./Pendente";
+import { ContatoSede } from "./ContatoSede";
 
 export function Rodape() {
   return (
@@ -21,7 +22,7 @@ export function Rodape() {
             <address className="sem-italico">
               <p>{instituicao.enderecoSede}</p>
               <p>
-                <Valor dado={instituicao.contatoPublico} />
+                <ContatoSede />
               </p>
             </address>
           </div>

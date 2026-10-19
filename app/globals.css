@@ -458,7 +458,65 @@ main {
   background: var(--branco);
   border-left: 4px solid var(--bordo);
   border-radius: var(--raio);
-  padding: 0.75rem 1rem;
+}
+
+/* Painel de cada cidade: <details>/<summary>, sem JavaScript. */
+.painel-cidade {
+  border-radius: var(--raio);
+}
+.painel-cidade summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  min-height: 44px;
+  padding: 0.6rem 1rem;
+  list-style: none;
+}
+.painel-cidade summary::-webkit-details-marker {
+  display: none;
+}
+/* Seta que indica abrir/fechar (decorativa; o estado é anunciado pelo próprio <details>). */
+.painel-cidade summary::after {
+  content: "▸";
+  margin-left: auto;
+  color: var(--bordo);
+  font-size: 1.1rem;
+}
+.painel-cidade[open] summary::after {
+  content: "▾";
+}
+.painel-cidade summary:hover strong {
+  text-decoration: underline;
+}
+.painel-corpo {
+  padding: 0 1rem 0.9rem 3.2rem;
+  /* O alvo é o corpo; a margem deixa o título do painel visível acima dele. */
+  scroll-margin-top: 5rem;
+}
+.painel-corpo p {
+  margin: 0.25rem 0;
+}
+/* Painel aberto pelo marcador do mapa: destaque pelo alvo (:target) dentro dele. */
+.painel-cidade:has(.painel-corpo:target) {
+  outline: 3px solid var(--dourado);
+  outline-offset: 2px;
+  background: var(--branco);
+}
+
+/* Marcadores do desenho: links para os painéis. */
+.mapa-marcador {
+  cursor: pointer;
+}
+.mapa-marcador:hover .mapa-ponto,
+.mapa-marcador:focus-visible .mapa-ponto {
+  fill: var(--bordo-escuro);
+  stroke: var(--foco);
+  stroke-width: 4;
+}
+.mapa-marcador:focus-visible {
+  outline: 3px solid var(--foco);
+  outline-offset: 2px;
 }
 .mapa-lista .marcador {
   display: inline-flex;

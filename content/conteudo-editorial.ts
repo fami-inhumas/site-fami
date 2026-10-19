@@ -47,5 +47,5 @@ export const responsaveisOuvidoria = pendente(
 
 export const encarregadoDados = pendente(
   "Encarregado de dados (LGPD) e canal de contato",
-  "Superintendente"
+  "Diretoria"
 );
