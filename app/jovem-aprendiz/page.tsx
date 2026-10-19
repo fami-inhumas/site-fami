@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { BlocoPendente } from "@/components/Blocos";
 import { CabecaPagina } from "@/components/CabecaPagina";
-import { Valor } from "@/components/Pendente";
 import { textoDireitosAprendiz } from "@/content/conteudo-editorial";
-import { instituicao } from "@/content/instituicao";
+import { ContatoSede } from "@/components/ContatoSede";
 
 export const metadata: Metadata = { title: "Jovem Aprendiz" };
 
@@ -35,7 +34,7 @@ export default function JovemAprendiz() {
           </ul>
           <p className="aviso">
             A inscrição pelo site ainda não está aberta. Enquanto isso, procure a FAMI:{" "}
-            <Valor dado={instituicao.contatoPublico} />
+            <ContatoSede />
           </p>
         </div>
       </section>
@@ -49,7 +48,7 @@ export default function JovemAprendiz() {
           </p>
           <p className="aviso">
             O cadastro de empresas pelo site ainda não está aberto. Contato:{" "}
-            <Valor dado={instituicao.contatoPublico} />
+            <ContatoSede />
           </p>
         </div>
       </section>

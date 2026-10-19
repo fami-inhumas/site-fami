@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { CabecaPagina } from "@/components/CabecaPagina";
-import { Valor } from "@/components/Pendente";
-import { instituicao } from "@/content/instituicao";
+import { ContatoSede } from "@/components/ContatoSede";
 
 export const metadata: Metadata = { title: "Acessibilidade" };
 
@@ -33,7 +32,7 @@ export default function Acessibilidade() {
 
           <h2>Encontrou uma barreira?</h2>
           <p>
-            Conte para a gente: <Valor dado={instituicao.contatoPublico} />
+            Conte para a gente: <ContatoSede />
           </p>
         </div>
       </section>
